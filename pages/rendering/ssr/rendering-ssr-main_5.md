@@ -5,7 +5,7 @@ transition: slide-up
 # ISR
 <br/>
 
-```tsx {all|8-17|15|19-27|20|22-24|26} {maxHeight:'300px'}
+```tsx {all|8-17|15|19-27|20|22-24|26} {maxHeight:'400px'}
 
 function Blog({ posts }) {
   return (
@@ -16,8 +16,7 @@ function Blog({ posts }) {
 }
  
 export async function getStaticProps() {
-  const res = await fetch('https://.../posts');
-  const posts = await res.json()
+  const posts = await getPosts('https://.../posts');
 
   return {
     props: {posts}, 
@@ -26,7 +25,7 @@ export async function getStaticProps() {
 }
 
 export async function getStaticPaths() {
-  const posts = await getPosts('https://.../posts').then(res=>res.json());
+  const posts = await getPosts('https://.../posts');
 
   const paths = posts.map((post) => ({
     params: { id: post.id },
@@ -38,6 +37,7 @@ export async function getStaticPaths() {
 export default Blog;
 
 ```
+
 
 <style>
 h1 {
