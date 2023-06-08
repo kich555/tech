@@ -5,8 +5,7 @@
 
 - 📲 **Rendering** - SSR(Server Side Rendering) 과 CSR(Client Side Rendering)
 - 🎨 **Design Template** - 더 높은 생산성을 위해
-- 🧑‍💻 **Server State Management** - response를 받은 시점부터 data는 fresh하지 않다.
-- 🤹 **Form** - 안전하고, 깔끔하게 Form을 다루는 방법
+- 📝 **Form** - 안전하고, 깔끔하게 Form을 다루는 방법
 
 <br>
 <br>
